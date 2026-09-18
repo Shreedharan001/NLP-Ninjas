@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #0b0f19;
+    --bg-secondary: #111827;
+    --bg-card: #162032;
+    --bg-card-hover: #1e2c44;
+    --border-color: #24344d;
+    --text-primary: #f3f4f6;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --solar-amber: #f59e0b;
+    --solar-emerald: #10b981;
+    --solar-rose: #f43f5e;
+    --solar-cyan: #06b6d4;
+    --solar-blue: #3b82f6;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: left;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #273549;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #384d6b;
+}
+
+/* Glassmorphism and Glow utilities */
+.glass-panel {
+  background: rgba(22, 32, 50, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 77, 107, 0.4);
+}
+
+.glow-amber {
+  box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.3);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 20px -5px rgba(16, 185, 129, 0.3);
+}
+
+.glow-rose {
+  box-shadow: 0 0 20px -5px rgba(244, 63, 94, 0.3);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px -5px rgba(6, 182, 212, 0.3);
+}
